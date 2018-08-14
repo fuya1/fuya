@@ -14,7 +14,7 @@ class ShopsController < ApplicationController
 
   # GET /shops/new
   def new
-    @shop = Shop.new
+    @shop = Shop.new(market_id: params[:market_id])
   end
 
   # GET /shops/1/edit

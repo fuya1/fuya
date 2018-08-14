@@ -12,25 +12,23 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name, plaeceholder: 'ex) 푸야네 가게' %>
+    <%= f.label '가게이름' %>
+    <%= f.text_field :name, placeholder:"ex) 푸야네 가게" %>
   </div>
 
   <div class="field">
-    <%= f.label :open %>
-    <%= f.text_field :open, plaeceholder: 'ex) 평일 18:00~24:00' %>
+    <%= f.label '영업시간' %>
+    <%= f.text_field :open, placeholder:'ex) 평일 18:00~24:00' %>
   </div>
 
   <div class="field">
-    <%= f.label :tel %>
-    <%= f.text_field :tel, plaeceholder: 'ex) 010-0000-0000' %>
+    <%= f.label '전화번호' %>
+    <%= f.text_field :tel, placeholder:'ex) 010-0000-0000' %>
   </div>
 
 <%# TODO: market_id 입력하지 않아도 되도록 %>
-  <div class="field">
-    <%= f.label :market_id %>
-    <%= f.text_field :market_id %>
-  </div>
+  <%= f.hidden_field :market_id %>
+
 
   <div class="actions">
     <%= f.submit %>

@@ -12,19 +12,21 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %>
+    <%= f.label :음식 %>
     <%= f.text_field :name %>
   </div>
 
   <div class="field">
-    <%= f.label :price %>
+    <%= f.label :가격 %>
     <%= f.number_field :price %>
   </div>
 
   <div class="field">
-    <%= f.label :content %>
+    <%= f.label :내용 %>
     <%= f.text_area :content %>
   </div>
+  
+  <%= f.hidden_field :shop_id %>
 
   <div class="actions">
     <%= f.submit %>

@@ -31,7 +31,7 @@
         <th>이름</th>
         <th>가격</th>
         <th>부가설명(자유)</th>
-        <th><%= link_to 'New', new_shop_path %></th>
+        <th><%= link_to '메뉴추가', new_menu_path(shop_id: @shop.id) %></th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -61,7 +61,7 @@
         <th>내용</th>
         <th>별점</th>
         <th>날짜</th>
-        <th><%= link_to 'New', new_shop_path %></th>
+        <th><%= link_to 'New', new_shop_review_path %></th>
         <th colspan="3"></th>
       </tr>
     </thead>

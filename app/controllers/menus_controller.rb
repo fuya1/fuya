@@ -14,7 +14,7 @@ class MenusController < ApplicationController
 
   # GET /menus/new
   def new
-    @menu = Menu.new
+    @menu = Menu.new(shop_id: params[:shop_id])
   end
 
   # GET /menus/1/edit
@@ -69,6 +69,6 @@ class MenusController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def menu_params
-      params.require(:menu).permit(:name, :price, :content)
+      params.require(:menu).permit(:name, :price, :content, :shop_id)
     end
 end
