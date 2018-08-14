@@ -1,24 +1,24 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>야시장 후기</strong>
   <%= @market_review.title %>
 </p>
 
 <p>
-  <strong>Content:</strong>
+  <strong>내용</strong>
   <%= @market_review.content %>
 </p>
 
 <p>
-  <strong>Rate:</strong>
+  <strong>별점</strong>
   <%= @market_review.rate %>
 </p>
 
 <p>
-  <strong>Date:</strong>
+  <strong>날짜</strong>
   <%= @market_review.date %>
 </p>
 
-<%= link_to 'Edit', edit_market_review_path(@market_review) %> |
-<%= link_to 'Back', market_reviews_path %>
+<%= link_to '수정', edit_market_review_path(@market_review) %> |
+<%= link_to '뒤로', market_reviews_path %>

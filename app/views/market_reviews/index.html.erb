@@ -20,9 +20,9 @@
         <td><%= market_review.content %></td>
         <td><%= market_review.rate %></td>
         <td><%= market_review.date %></td>
-        <td><%= link_to 'Show', market_review %></td>
-        <td><%= link_to 'Edit', edit_market_review_path(market_review) %></td>
-        <td><%= link_to 'Destroy', market_review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '보기', market_review %></td>
+        <td><%= link_to '수정', edit_market_review_path(market_review) %></td>
+        <td><%= link_to '삭제', market_review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

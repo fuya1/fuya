@@ -12,22 +12,22 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %>
+    <%= f.label '야시장 이름', placeholder:"야시장 이름을 입력해주세요" %>
     <%= f.text_field :title %>
   </div>
 
   <div class="field">
-    <%= f.label :content %>
+    <%= f.label '내용', placeholder:"추천메뉴, 위생상태 등 다양하게 작성해주세요" %>
     <%= f.text_area :content %>
   </div>
 
   <div class="field">
-    <%= f.label :rate %>
+    <%= f.label '별점', placeholder:"5.0" %>
     <%= f.text_field :rate %>
   </div>
 
   <div class="field">
-    <%= f.label :date %>
+    <%= f.label '날짜'%>
     <%= f.date_select :date %>
   </div>
 
