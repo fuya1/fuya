@@ -48,3 +48,5 @@ Things you may want to cover:
   model로 만든 것 : 메뉴이름(name) 가격(price-integer) 부가설명(content-text)
 
 * devise gem 사용을 위한 세팅 완료(2018-08-15)
+
+* admin gem 설치 완료(2018-08-15), 추후에 https://say8425.github.io/setup-rails-admin-1/ 를 참고하여 설정하기

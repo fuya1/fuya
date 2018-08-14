@@ -11,6 +11,9 @@ gem 'rolify' # role 관리
 gem 'authority' # 권한설정
 gem 'letter_opener' # 별도의 이메일 발송을 위한 환경을 설정하지 않아도 되도록 하는 gem
 
+# 관리자 gem
+gem 'rails_admin'
+
 # bootstrap gem
 gem 'bootstrap'
 
