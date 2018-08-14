@@ -5,6 +5,12 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# 회원인증 및 권한 설정을 위한 gem
+gem 'devise' # 회원가입 및 인증
+gem 'rolify' # role 관리
+gem 'authority' # 권한설정
+gem 'letter_opener' # 별도의 이메일 발송을 위한 환경을 설정하지 않아도 되도록 하는 gem
+
 # bootstrap gem
 gem 'bootstrap'
 

@@ -20,6 +20,11 @@
     <%= link_to '야시장 찾기(지역별)', '/markets' %>
     <%= link_to '야시장 후기', '/market_reviews' %>
     <%= link_to '업주문의', '#' %>
+
+    <!-- flash 메시지(주로 컨트롤로 액션의 처리 결과 정보를 전달하기 위해 사용하는 해시 데이터임)가 보이도록 코드를 추가한다. -->
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
     <%= yield %>
   </body>
 </html>
