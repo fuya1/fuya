@@ -11,8 +11,13 @@
   <body>
     <%# TODO: 업주문의 링크 채우기 %>
 
-    <%= link_to '로그인', new_user_session_path %>
-    <%= link_to '회원가입', new_user_registration_path %>
+    <% if user_signed_in? %>
+      <%= link_to '로그아웃', destroy_user_session_path, method: :delete, data: { confirm: '정말 로그아웃 하시겠습니까?' } %>
+    <% else %>
+      <%= link_to '로그인', new_user_session_path %>
+      <%= link_to '회원가입', new_user_registration_path %>
+    <% end %>
+
     <%= link_to '고객센터', '#' %>
 
     <br>
