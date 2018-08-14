@@ -6,6 +6,7 @@ class CreateShopReviews < ActiveRecord::Migration[5.0]
       t.float :rate
       t.date :date
       t.belongs_to :shop
+      t.belongs_to :user
 
       t.timestamps
     end

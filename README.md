@@ -33,6 +33,7 @@ Things you may want to cover:
 
 * MarketReview scaffold
   Market(상위) - MarketReview(하위)
+  User(상위) - MarketReview(하위)
   model로 만든 것 : 제목(title-string) 내용(content-text) 별점(rate-float) 날짜(date-date)
 
 * Shop scaffold
@@ -41,6 +42,7 @@ Things you may want to cover:
 
 * ShopReview scaffold
   Shop(상위) - ShopReview(하위)
+  User(상위) - ShopReview(하위)
   model로 만든 것 : 제목(title-string) 내용(content-text) 별점(rate-float) 날짜(date-date)
 
 * Menu scaffold
