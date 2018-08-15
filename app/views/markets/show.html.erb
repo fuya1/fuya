@@ -39,12 +39,16 @@
 <p>
   <table>
     <thead>
-      <th><%= link_to '새 가게 만들기', new_shop_path(market_id: @market.id) %></th>
       <tr>
         <th>사진</th>
         <th>가게이름(대표메뉴)</th>
         <th>부가설명(자유)</th>
         <th>전화번호</th>
+        <% if user_signed_in? %>
+          <td><%= link_to '새 가게 만들기', new_shop_path(market_id: @market.id) %></td>
+        <% else %>
+          <td>새 가게를 만드려면 로그인하세요!</td>
+        <% end %>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -74,7 +78,11 @@
         <th>내용</th>
         <th>별점</th>
         <th>날짜</th>
-        <th><%= link_to '새 리뷰 쓰기', new_shop_review_path %></th>
+        <% if user_signed_in? %>
+          <td><%= link_to '새 리뷰 쓰기', new_shop_review_path %></td>
+        <% else %>
+          <td>새 리뷰를 쓰시려면 로그인하세요!</td>
+        <% end %>
         <th colspan="3"></th>
       </tr>
     </thead>

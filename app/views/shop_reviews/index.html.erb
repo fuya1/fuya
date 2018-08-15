@@ -20,9 +20,11 @@
         <td><%= shop_review.content %></td>
         <td><%= shop_review.rate %></td>
         <td><%= shop_review.date %></td>
-        <td><%= link_to 'Show', shop_review %></td>
-        <td><%= link_to 'Edit', edit_shop_review_path(shop_review) %></td>
-        <td><%= link_to 'Destroy', shop_review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '보기', shop_review %></td>
+        <% if shop_review.user == current_user %>
+          <td><%= link_to '수정', edit_shop_review_path(shop_review) %></td>
+          <td><%= link_to '삭제', shop_review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +32,6 @@
 
 <br>
 
-<%= link_to '새 후기 작성하기', new_shop_review_path %>
+<% if user_signed_in? %>
+  <%= link_to '새 후기 작성하기', new_shop_review_path %>
+<% end %>

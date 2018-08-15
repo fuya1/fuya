@@ -28,7 +28,7 @@ class ShopReviewsController < ApplicationController
 
     respond_to do |format|
       if @shop_review.save
-        format.html { redirect_to @shop_review, notice: 'Shop review was successfully created.' }
+        format.html { redirect_to @shop_review, notice: '가게 리뷰 작성 완료' }
         format.json { render :show, status: :created, location: @shop_review }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class ShopReviewsController < ApplicationController
   def update
     respond_to do |format|
       if @shop_review.update(shop_review_params)
-        format.html { redirect_to @shop_review, notice: 'Shop review was successfully updated.' }
+        format.html { redirect_to @shop_review, notice: '가게 리뷰 수정 완료' }
         format.json { render :show, status: :ok, location: @shop_review }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class ShopReviewsController < ApplicationController
   def destroy
     @shop_review.destroy
     respond_to do |format|
-      format.html { redirect_to shop_reviews_url, notice: 'Shop review was successfully destroyed.' }
+      format.html { redirect_to shop_reviews_url, notice: '가게 리뷰가 삭제되었습니다.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +69,6 @@ class ShopReviewsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def shop_review_params
-      params.require(:shop_review).permit(:title, :content, :rate, :date)
+      params.require(:shop_review).permit(:title, :content, :rate, :date, :user_id, :shop_id)
     end
 end

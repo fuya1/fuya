@@ -1,24 +1,26 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>제목</strong>
   <%= @shop_review.title %>
 </p>
 
 <p>
-  <strong>Content:</strong>
+  <strong>내용</strong>
   <%= @shop_review.content %>
 </p>
 
 <p>
-  <strong>Rate:</strong>
+  <strong>별점</strong>
   <%= @shop_review.rate %>
 </p>
 
 <p>
-  <strong>Date:</strong>
+  <strong>날짜</strong>
   <%= @shop_review.date %>
 </p>
 
-<%= link_to 'Edit', edit_shop_review_path(@shop_review) %> |
-<%= link_to 'Back', shop_reviews_path %>
+<% if @shop_review.user == current_user %>
+  <%= link_to '수정', edit_shop_review_path(@shop_review) %> |
+<% end %>
+<%= link_to '뒤로가기', shop_reviews_path %>

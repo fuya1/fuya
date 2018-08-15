@@ -22,18 +22,17 @@
     </nav>
 
     <nav class="nav navbar-light bg-light">
-      <a class="navbar-brand" href="#">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1TR_YdO3E71vORHmD4qI0Dvy1fjh3C-a8G9qbg3TYPfz2egNv", height="100px", alt="">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1TR_YdO3E71vORHmD4qI0Dvy1fjh3C-a8G9qbg3TYPfz2egNv", height="100px", alt="">
 
-        <%# TODO: 업주문의 링크 채우기 %>
-        <% if user_signed_in? %>
-            <%= link_to '로그아웃', destroy_user_session_path, method: :delete, data: { confirm: '정말 로그아웃 하시겠습니까?' }, class: "nav-link" %>
-        <% else %>
-            <%= link_to '로그인', new_user_session_path, class: "nav-link" %>
-            <%= link_to '회원가입', new_user_registration_path, class: "nav-link" %>
-        <% end %>
-        <%= link_to '고객센터', '#', class: "nav-link" %>
-      </a>
+      <%# TODO: 업주문의 링크 채우기 %>
+      <% if user_signed_in? %>
+          <%= current_user.email %>님 안녕하세요!
+          <%= link_to '로그아웃', destroy_user_session_path, method: :delete, data: { confirm: '정말 로그아웃 하시겠습니까?' }, class: "nav-link" %>
+      <% else %>
+          <%= link_to '로그인', new_user_session_path, class: "nav-link" %>
+          <%= link_to '회원가입', new_user_registration_path, class: "nav-link" %>
+      <% end %>
+      <%= link_to '고객센터', '#', class: "nav-link" %>
     </nav>
 
     <ul class="nav justify-content-center">

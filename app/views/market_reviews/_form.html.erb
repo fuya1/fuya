@@ -26,12 +26,10 @@
     <%= f.text_field :rate %>
   </div>
 
-  <div class="field">
-    <%= f.label '날짜'%>
-    <%= f.date_select :date %>
-  </div>
 
-  <%= f.hidden_field :user_id %>
+  <%= f.hidden_field :date, value: DateTime.now.to_date %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
+  <%= f.hiiden_fiend :market_id, value: 1 %>
 
   <div class="actions">
     <%= f.submit %>

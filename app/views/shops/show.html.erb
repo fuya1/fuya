@@ -33,7 +33,11 @@
         <th>이름</th>
         <th>가격</th>
         <th>부가설명(자유)</th>
-        <th><%= link_to '메뉴 추가', new_menu_path(shop_id: @shop.id) %></th>
+        <% if user_signed_in? %>
+          <th><%= link_to '메뉴 추가', new_menu_path(shop_id: @shop.id) %></th>
+        <% else %>
+          <td>새 메뉴를 추가하시려면 로그인하세요!</td>
+        <% end %>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -63,7 +67,12 @@
         <th>내용</th>
         <th>별점</th>
         <th>날짜</th>
-        <th><%= link_to '새 후기 쓰기', new_shop_review_path %></th>
+        <% if user_signed_in? %>
+        <%# TODO: 새 후기 쓰기가 뜨는데, 클릭하면 안되도록! %>
+          <th><%= link_to '새 후기 쓰기', new_shop_review_path %></th>
+        <% else %>
+          <td>새 후기를 쓰려면 로그인하세요!</td>
+        <% end %>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -76,8 +85,10 @@
           <td><%= shop_review.rate %></td>
           <td><%= shop_review.date %></td>
           <td><%= link_to '보기', shop_review %></td>
-          <td><%= link_to '수정', edit_shop_review_path(shop_review) %></td>
-          <td><%= link_to '삭제', shop_review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% if shop_review.user == current_user %>
+            <td><%= link_to '수정', edit_shop_review_path(shop_review) %></td>
+            <td><%= link_to '삭제', shop_review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
         </tr>
       <% end %>
     </tbody>

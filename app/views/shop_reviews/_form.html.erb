@@ -12,24 +12,27 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %>
+    <%= f.label '제목' %>
     <%= f.text_field :title %>
   </div>
 
   <div class="field">
-    <%= f.label :content %>
+    <%= f.label '내용' %>
     <%= f.text_area :content %>
   </div>
 
   <div class="field">
-    <%= f.label :rate %>
+    <%= f.label '별점' %>
     <%= f.text_field :rate %>
   </div>
 
-  <div class="field">
-    <%= f.label :date %>
+  <%= f.hidden_field :date, value: DateTime.now.to_date %>
+  <!-- <div class="field">
+    <%= f.label '날짜' %>
     <%= f.date_select :date %>
-  </div>
+  </div> -->
+  <%= f.hidden_field :shop_id, value: 1 %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
 
   <div class="actions">
     <%= f.submit %>
