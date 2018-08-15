@@ -9,22 +9,44 @@
   </head>
 
   <body>
-    <%# TODO: 업주문의 링크 채우기 %>
 
-    <% if user_signed_in? %>
-      <%= link_to '로그아웃', destroy_user_session_path, method: :delete, data: { confirm: '정말 로그아웃 하시겠습니까?' } %>
-    <% else %>
-      <%= link_to '로그인', new_user_session_path %>
-      <%= link_to '회원가입', new_user_registration_path %>
-    <% end %>
+    <nav class="navbar navbar-light bg-light">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <%= link_to '야시장', '#', class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to '푸드트럭', '#', class: 'nav-link' %>
+        </li>
+      </ul>
+    </nav>
 
-    <%= link_to '고객센터', '#' %>
+    <nav class="nav navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1TR_YdO3E71vORHmD4qI0Dvy1fjh3C-a8G9qbg3TYPfz2egNv", height="100px", alt="">
 
-    <br>
+        <%# TODO: 업주문의 링크 채우기 %>
+        <% if user_signed_in? %>
+            <%= link_to '로그아웃', destroy_user_session_path, method: :delete, data: { confirm: '정말 로그아웃 하시겠습니까?' }, class: "nav-link" %>
+        <% else %>
+            <%= link_to '로그인', new_user_session_path, class: "nav-link" %>
+            <%= link_to '회원가입', new_user_registration_path, class: "nav-link" %>
+        <% end %>
+        <%= link_to '고객센터', '#', class: "nav-link" %>
+      </a>
+    </nav>
 
-    <%= link_to '야시장 찾기(지역별)', '/markets' %>
-    <%= link_to '야시장 후기', '/market_reviews' %>
-    <%= link_to '업주문의', '#' %>
+    <ul class="nav justify-content-center">
+      <li class="nav-item">
+        <%= link_to '야시장 찾기(지역별)', '/markets', class: "nav-link active" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to '야시장 후기', '/market_reviews', class: 'nav-link' %>
+      </li>
+      <li class="nav-item">
+        <%= link_to '업주문의', '#', class: 'nav-link' %>
+      </li>
+    </ul>
 
     <!-- flash 메시지(주로 컨트롤로 액션의 처리 결과 정보를 전달하기 위해 사용하는 해시 데이터임)가 보이도록 코드를 추가한다. -->
     <p class="notice"><%= notice %></p>
