@@ -1,0 +1,7 @@
+<p>안녕하세요! <%= @resource.email %>!</p>
+
+<p>로그인 시도 횟수가 너무 많아 계정이 잠겼습니다.</p>
+
+<p>계정의 잠금을 해제하려면 아래 링크를 클릭하십시오:</p>
+
+<p><%= link_to '계정 잠금 해제하기', unlock_url(@resource, unlock_token: @token) %></p>

@@ -1,0 +1,19 @@
+<h2>비밀번호 변경하기</h2>
+
+<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.input :reset_password_token, as: :hidden %>
+  <%= f.full_error :reset_password_token %>
+
+  <div class="form-inputs">
+    <%= f.input :password, label: "새 비밀번호", required: true, autofocus: true, hint: ("최소 #{@minimum_password_length}글자" if @minimum_password_length) %>
+    <%= f.input :password_confirmation, label: "새 비밀번호를 확인하세요.", required: true %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "비밀번호 변경하기" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
