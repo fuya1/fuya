@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :admins
   devise_for :users
   resources :shop_reviews
   resources :market_reviews
