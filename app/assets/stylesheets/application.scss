@@ -13,4 +13,45 @@
  *= require_tree .
  *= require_self
  */
+
+#api{
+    border:1px solid black;
+    width:360px;
+    height:360px;
+    margin-left:30px;
+    text-align: center;
+    float:left;
+}
+
+#search{
+    border:1px solid black;
+    width: 480px;
+    height:50px;
+    margin-left: 30px;
+    text-align: center;
+
+}
+
+.container{
+    width: 100%;
+    border-top: #f6bb9e 2px solid;
+    border-bottom: #f6bb9e 2px solid;
+    border-collapse: collapse;
+    
+}
+
+.new{
+    color: white !important;
+    border:5px outset blue;
+    background: blue;
+    position: absolute;
+    left:1260px;
+}
+
+.entry{
+    float: left;
+}
+
+
+
  @import "bootstrap";

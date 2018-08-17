@@ -1,32 +1,34 @@
 <p id="notice"><%= notice %></p>
 
-<h1>야시장-지역별(/market/locate)</h1>
+<!--<h1>야시장-지역별(/market/locate)</h1>-->
 
 <%# TODO: 지도 api 추가하기 %>
-<p>지도 api</p>
+<p id="api">지도 api</p>
 
 <%# TODO: 지역 검색 부분 추가하기 %>
-<p>지역 검색 부분</p>
+<div class="entry">
+  
+<p id="search">지역 검색 부분</p>
 
 <table>
-  <thead>
-    <tr>
-      <th>시/도</th>
-      <th>구/군</th>
-      <th>야시장 이름</th>
-      <th>상세주소</th>
-      <th>전화번호</th>
-      <th colspan="3"></th>
+  <thead> 
+    <tr class="container">
+      <th class="item">시/도</th>
+      <th class="item">구/군</th>
+      <th class="item">야시장 이름</th>
+      <th class="item">상세주소</th>
+      <th class="item">전화번호</th>
+      <!--<th colspan="3"></th>--> 
     </tr>
   </thead>
 
   <tbody>
     <% @markets.each do |market| %>
-      <tr>
-        <td><%= market.locate1 %></td>
-        <td><%= market.locate2 %></td>
-        <td><%= market.name %></td>
-        <td><%= market.address %></td>
+      <tr class="container">
+        <td class="item"><%= market.locate1 %></td>
+        <td class="item"><%= market.locate2 %></td>
+        <td class="item"><%= market.name %></td>
+        <td class="item"><%= market.address %></td>
         <td><%= market.tel %></td>
         <td><%= link_to '보기', market %></td>
         <td><%= link_to '수정', edit_market_path(market) %></td>
@@ -36,6 +38,10 @@
   </tbody>
 </table>
 
+
+</div>
+
 <br>
 
-<%= link_to '새 야시장 추가하기', new_market_path %>
+
+<%= link_to '새 야시장 추가하기', new_market_path, class:"new" %>
