@@ -69,7 +69,7 @@
         <th>날짜</th>
         <% if user_signed_in? %>
         <%# TODO: 새 후기 쓰기가 뜨는데, 클릭하면 안되도록! %>
-          <th><%= link_to '새 후기 쓰기', new_shop_review_path %></th>
+          <th><%= link_to '새 후기 쓰기', new_shop_review_path(shop_id: @shop.id) %></th>
         <% else %>
           <td>새 후기를 쓰려면 로그인하세요!</td>
         <% end %>

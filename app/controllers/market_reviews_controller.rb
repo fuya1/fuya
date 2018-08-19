@@ -14,7 +14,7 @@ class MarketReviewsController < ApplicationController
 
   # GET /market_reviews/new
   def new
-    @market_review = MarketReview.new
+    @market_review = MarketReview.new(market_id: params[:market_id])
   end
 
   # GET /market_reviews/1/edit
@@ -69,6 +69,6 @@ class MarketReviewsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def market_review_params
-      params.require(:market_review).permit(:title, :content, :rate, :date)
+      params.require(:market_review).permit(:title, :content, :rate, :date, :user_id, :market_id)
     end
 end

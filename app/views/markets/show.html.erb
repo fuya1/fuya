@@ -79,7 +79,7 @@
         <th>별점</th>
         <th>날짜</th>
         <% if user_signed_in? %>
-          <td><%= link_to '새 리뷰 쓰기', new_shop_review_path %></td>
+          <td><%= link_to '새 리뷰 쓰기', new_market_review_path(market_id: @market.id) %></td>
         <% else %>
           <td>새 리뷰를 쓰시려면 로그인하세요!</td>
         <% end %>

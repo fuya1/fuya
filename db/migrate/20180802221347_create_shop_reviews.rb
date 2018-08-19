@@ -5,6 +5,7 @@ class CreateShopReviews < ActiveRecord::Migration[5.0]
       t.text :content
       t.float :rate
       t.date :date
+      t.integer :shop_id      
       t.belongs_to :shop
       t.belongs_to :user
 

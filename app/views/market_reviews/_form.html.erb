@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label '야시장 이름', placeholder:"야시장 이름을 입력해주세요" %>
+    <%= f.label '제목' %>
     <%= f.text_field :title %>
   </div>
 
@@ -29,7 +29,7 @@
 
   <%= f.hidden_field :date, value: DateTime.now.to_date %>
   <%= f.hidden_field :user_id, value: current_user.id %>
-  <%= f.hiiden_fiend :market_id, value: 1 %>
+  <%= f.hidden_field :market_id %>
 
   <div class="actions">
     <%= f.submit %>
