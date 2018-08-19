@@ -40,18 +40,27 @@
     
 }
 
+.item{
+    padding-left: 30px;
+    padding-right: 30px;
+ 
+}
+
 .new{
-    color: white !important;
-    border:5px outset blue;
-    background: blue;
-    position: absolute;
-    left:1260px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    background-color: #008CBA;;
+    font-size: 16px;
+    padding: 12px 28px;
+    border-radius: 8px;
 }
 
 .entry{
+    margin-left: 50px;
     float: left;
 }
-
 
 
  @import "bootstrap";

@@ -11,6 +11,7 @@
     </div>
   <% end %>
 
+<div class="make">
   <div class="field">
     <%= f.label '야시장 이름' %>
     <%= f.text_field :name, placeholder:"ex) 여의도 월드나이트마켓" %>
@@ -51,8 +52,10 @@
     <%= f.label '구/군' %>
     <%= f.text_field :locate2, placeholder:"ex) 영등포구" %>
   </div>
-
+</div>
+</br>
+</br>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "새 야시장 추가하기", class:"add" %>
   </div>
 <% end %>

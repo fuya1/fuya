@@ -1,3 +1,42 @@
 // Place all the styles related to the Markets controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.field,.actions{
+    text-align: center;
+    font-weight: bold;
+}
+
+h1{
+   border: none;
+    color: white !important;
+    padding: 15px 32px;
+    text-align: center;
+    background-color: #2ECCFA;
+    font-size: 16px;
+    padding: 12px 28px;
+    border-radius: 8px;
+    margin-left: 550px;
+    margin-right: 550px;
+   
+}
+
+.make{
+    border: #2ECCFA 2px solid;
+    background-color: #white;
+    margin-left: 500px;
+    margin-right: 500px;
+    padding: 50px;
+    border-radius: 8px;
+}
+
+.add{
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    background-color: #2ECCFA;
+    font-size: 16px;
+    padding: 12px 28px;
+    border-radius: 8px;
+}

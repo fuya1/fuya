@@ -1,15 +1,64 @@
-<h2>로그인</h2>
+<!--로그인 페이지-->
 
+<h2>fuya</h2>
+
+<div class="border-form-div">
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-inputs">
-    <%= f.input :email, required: false, autofocus: true %>
-    <%= f.input :password, required: false %>
+    <%= f.input :email, required: false, autofocus: true, placeholder:"email" %>
+    <%= f.input :password, required: false, placeholder:"password" %>
     <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "로그인" %>
+    <%= f.button :submit, "로그인", class:"new"  %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+</div>
+
+<style>
+.border-form-div {
+  text-align: center;
+  max-width: 400px;
+  padding: 19px 29px 29px;
+  margin: 0 auto 20px;
+  background-color: #fff;
+  border: 1px solid #2ECCFA;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+          box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.border-form-div .form-signin-heading,
+.border-form-div .checkbox {
+  margin-bottom: 10px;
+}
+.border-form-div input[type="text"],
+.border-form-div input[type="email"],
+.border-form-div input[type="password"] {
+  font-size: 16px;
+  height: auto;
+  margin-bottom: 15px;
+  padding: 7px 9px;
+}
+
+h2{
+    text-align: center;
+    background-color: which;
+    color: #D8D8D8;
+    border: 2px solid #D8D8D8;
+    border-radius: 50%;
+    margin-left: 720px;
+    margin-right: 650px;
+    margin-bottom: 20px;
+    padding: 32px 32px;
+    display: inline-block;
+    font-size: 1.5rem;
+ }
+
+</style>

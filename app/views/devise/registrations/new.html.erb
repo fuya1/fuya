@@ -1,5 +1,6 @@
-<h2>회원가입</h2>
+<h2>fuya</h2>
 
+<div class="border-form-div">
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
@@ -10,8 +11,63 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "회원가입" %>
+    <%= f.button :submit, "회원가입", class:"new" %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
+
+<style>
+.border-form-div {
+  max-width: 450px;
+  padding: 19px 29px 29px;
+  margin: 0 auto 20px;
+  background-color: #fff;
+  border: 1px solid #2ECCFA;
+  -webkit-borde#2ECCFAr-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+          box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.border-form-div .form-signin-heading,
+.border-form-div .checkbox {
+  margin-bottom: 10px;
+}
+.border-form-div input[type="text"],
+.border-form-div input[type="email"],
+.border-form-div input[type="password"] {
+  font-size: 16px;
+  height: auto;
+  margin-bottom: 15px;
+  padding: 7px 9px;
+}
+.form-actions{
+  text-align: right;
+}
+.new{
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    background-color: #008CBA;;
+    font-size: 16px;
+    padding: 12px 28px;
+    border-radius: 8px;
+}
+h2{
+    text-align: center;
+    background-color: which;
+    color: #D8D8D8;
+    border: 2px solid #D8D8D8;
+    border-radius: 50%;
+    margin-left: 720px;
+    margin-right: 650px;
+    margin-bottom: 20px;
+    padding: 32px 32px;
+    display: inline-block;
+    font-size: 1.5rem;
+ }
+</style>
