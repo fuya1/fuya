@@ -14,7 +14,7 @@ class ShopReviewsController < ApplicationController
 
   # GET /shop_reviews/new
   def new
-    @shop_review = ShopReview.new
+    @shop_review = ShopReview.new(shop_id: params[:shop_id])
   end
 
   # GET /shop_reviews/1/edit
