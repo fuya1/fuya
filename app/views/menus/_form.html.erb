@@ -1,4 +1,4 @@
-<%= form_for(menu) do |f| %>
+<%= form_for(menu, html: {multipart: true}) do |f| %>
   <% if menu.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(menu.errors.count, "error") %> prohibited this menu from being saved:</h2>
@@ -24,6 +24,11 @@
   <div class="field">
     <%= f.label :내용 %>
     <%= f.text_area :content %>
+  </div>
+  
+  <div class="field">
+    <%= f.label '사진'%>
+    <%= f.file_field :image %>
   </div>
   
   <%= f.hidden_field :shop_id %>

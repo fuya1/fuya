@@ -6,6 +6,7 @@ class CreateMarketReviews < ActiveRecord::Migration[5.0]
       t.float :rate
       t.date :date
       t.integer :market_id
+      t.string :image
       t.belongs_to :market
       t.belongs_to :user
 

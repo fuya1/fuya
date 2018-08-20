@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <%= image_tag @menu.image.url %><br>
+</p>
+<p>
   <strong>Name:</strong>
   <%= @menu.name %>
 </p>
@@ -15,5 +18,5 @@
   <%= @menu.content %>
 </p>
 
-<%= link_to '수정', edit_menu_path(@menu) %> |
-<%= link_to '뒤로가기', menus_path(@menu %>
+<%= link_to '수정', edit_menu_path(@menu) %> 
+<%= link_to '뒤로가기', menus_path(@menu) %>

@@ -5,6 +5,7 @@ class CreateShops < ActiveRecord::Migration[5.0]
       t.string  :open
       t.string  :tel
       t.integer :market_id
+      t.string :image
       t.belongs_to :market
 
       t.timestamps

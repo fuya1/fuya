@@ -69,6 +69,6 @@ class MarketsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def market_params
-      params.require(:market).permit(:name, :address, :open, :parking, :tel, :closed, :locate1, :locate2, :locate3)
+      params.require(:market).permit(:name, :address, :open, :parking, :tel, :closed, :locate1, :locate2, :locate3, :image)
     end
 end

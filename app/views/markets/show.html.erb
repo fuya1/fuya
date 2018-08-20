@@ -6,7 +6,7 @@
 
 ---------------------- 이미지 칸 ----------------------
 <p>
-  이미지
+  <%= image_tag @market.image.url %><br>
 </p>
 
 ---------------------- 시장 정보 설명 칸 ----------------------
@@ -56,7 +56,7 @@
     <tbody>
       <% @market.shops.each do |shop| %>
         <tr>
-          <td>사진</td>
+          <td><%= image_tag shop.image.thumb.url %></td>
           <td><%= shop.name %></td>
           <td>부가설명(자유)</td>
           <td><%= shop.tel %></td>

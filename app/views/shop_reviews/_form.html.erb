@@ -1,4 +1,4 @@
-<%= form_for(shop_review) do |f| %>
+<%= form_for(shop_review, html: {multipart: true}) do |f| %>
   <% if shop_review.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(shop_review.errors.count, "error") %> prohibited this shop_review from being saved:</h2>
@@ -24,6 +24,11 @@
   <div class="field">
     <%= f.label '별점' %>
     <%= f.text_field :rate %>
+  </div>
+  
+  <div class="field">
+    <%= f.label '사진'%>
+    <%= f.file_field :image %>
   </div>
 
   <%= f.hidden_field :date, value: DateTime.now.to_date %>

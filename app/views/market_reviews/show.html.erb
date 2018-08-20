@@ -26,5 +26,10 @@
   <%= @market_review.date %>
 </p>
 
+<p>
+  <strong>사진</strong>
+  <%= image_tag @market_review.image.url %>
+</p>
+
 <%= link_to '수정', edit_market_review_path(@market_review) %> |
 <%= link_to '뒤로', market_reviews_path %>

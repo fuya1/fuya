@@ -5,6 +5,7 @@ class CreateMenus < ActiveRecord::Migration[5.0]
       t.integer :price
       t.text :content
       t.integer :shop_id
+      t.string :image
       t.belongs_to :shop
       
       t.timestamps

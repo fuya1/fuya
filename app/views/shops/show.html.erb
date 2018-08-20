@@ -5,7 +5,9 @@
 <h1><%= @shop.name %></h1>
 
 ---------------------- 가게 사진 칸 ----------------------
-<p>사진</p>
+<p>
+  <%= image_tag @shop.image.url %><br>
+</p>
 
 ---------------------- 가게 정보 설명 칸 ----------------------
 <p>
@@ -45,7 +47,7 @@
     <tbody>
       <% @shop.menus.each do |menu| %>
         <tr>
-          <td>사진</td>
+          <td><%= image_tag menu.image.thumb.url %></td>
           <td><%= menu.name %></td>
           <td><%= menu.price %></td>
           <td><%= menu.content %></td>

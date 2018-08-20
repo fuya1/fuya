@@ -69,6 +69,6 @@ class MarketReviewsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def market_review_params
-      params.require(:market_review).permit(:title, :content, :rate, :date, :user_id, :market_id)
+      params.require(:market_review).permit(:title, :content, :rate, :date, :user_id, :market_id, :image)
     end
 end

@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20180815004236) do
     t.float    "rate"
     t.date     "date"
     t.integer  "market_id"
+    t.string   "image"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -52,6 +53,7 @@ ActiveRecord::Schema.define(version: 20180815004236) do
     t.string   "locate1"
     t.string   "locate2"
     t.string   "locate3"
+    t.string   "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -61,6 +63,7 @@ ActiveRecord::Schema.define(version: 20180815004236) do
     t.integer  "price"
     t.text     "content"
     t.integer  "shop_id"
+    t.string   "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["shop_id"], name: "index_menus_on_shop_id"
@@ -72,6 +75,7 @@ ActiveRecord::Schema.define(version: 20180815004236) do
     t.float    "rate"
     t.date     "date"
     t.integer  "shop_id"
+    t.string   "image"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -84,6 +88,7 @@ ActiveRecord::Schema.define(version: 20180815004236) do
     t.string   "open"
     t.string   "tel"
     t.integer  "market_id"
+    t.string   "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["market_id"], name: "index_shops_on_market_id"

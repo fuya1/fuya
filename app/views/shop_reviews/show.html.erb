@@ -20,6 +20,11 @@
   <%= @shop_review.date %>
 </p>
 
+<p>
+  <strong>사진</strong>
+  <%= image_tag @shop_review.image.url %>
+</p>
+
 <% if @shop_review.user == current_user %>
   <%= link_to '수정', edit_shop_review_path(@shop_review) %> |
 <% end %>

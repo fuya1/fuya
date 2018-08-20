@@ -10,6 +10,7 @@ class CreateMarkets < ActiveRecord::Migration[5.0]
       t.string :locate1
       t.string :locate2
       t.string :locate3
+      t.string :image
 
       t.timestamps
     end
