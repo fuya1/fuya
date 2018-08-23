@@ -11,18 +11,19 @@
     </div>
   <% end %>
 
+<div class="make">
   <div class="field">
-    <%= f.label :음식 %>
+    <%= f.label '음식' %>
     <%= f.text_field :name %>
   </div>
 
   <div class="field">
-    <%= f.label :가격 %>
+    <%= f.label '가격' %>
     <%= f.number_field :price %>
   </div>
 
   <div class="field">
-    <%= f.label :내용 %>
+    <%= f.label '내용' %>
     <%= f.text_area :content %>
   </div>
   
@@ -32,8 +33,10 @@
   </div>
   
   <%= f.hidden_field :shop_id %>
-
+</div>
+</br>
+</br>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "새 메뉴 추가하기", class:"add" %>
   </div>
 <% end %>
