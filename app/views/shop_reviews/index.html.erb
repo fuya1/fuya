@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>야시장-후기 페이지(/market/review_list)(가게)</h1>
+<h1>야시장 후기(가게)</h1>
 
-<table>
+<table style="margin: auto; text-align: center;">
   <thead>
     <tr class="container">
       <th class="item">제목</th>
@@ -33,5 +33,5 @@
 <br>
 
 <% if user_signed_in? %>
-  <%= link_to '새 후기 작성하기', new_shop_review_path, class="new" %>
+  <%= link_to '새 후기 작성하기', new_shop_review_path %>
 <% end %>
